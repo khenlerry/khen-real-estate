@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Contact Form</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <!-- Button to open the popup -->
+    <button class="open-popup" onclick="openPopup()">Contact Us</button>
+
+    <!-- Popup Structure -->
+    <div class="popup-overlay" id="popup-overlay">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup()">&times;</span>
+            <div class="contact-info">
+                <p>(925) 553-6707</p>
+                <p>luxuryhomesinwc@icloud.com</p>
+                <img src="image/blackflag.jpg" alt="Logo" class="small-logo">
+                <p>4337 Chabot Drive, Pleasanton, CA 94588</p>
+                <p>Julie Hansen-Orvis | CA DRE# 00934447</p>
+            </div>
+            <div class="form-container">
+                <h2>Submit a Message</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                  
+
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('popup-overlay').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup-overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
